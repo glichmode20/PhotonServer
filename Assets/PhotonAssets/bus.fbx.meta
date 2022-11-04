@@ -1,0 +1,562 @@
+fileFormatVersion: 2
+guid: 13d7bbff230f244428fe8d64e9cbc1ae
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: -6483198287299200792
+    second: Fan Rear|test_pose
+  - first:
+      74: -6510264321497282146
+    second: BUS Wheel Rim Seal|test_pose
+  - first:
+      74: -785747476811599550
+    second: BUS Display Frame|test_pose
+  - first:
+      74: -29980333074447131
+    second: BUS Exterior Top Panel|test_pose
+  - first:
+      74: -9108198855588834328
+    second: BUS Front Panel Mid Top|test_pose
+  - first:
+      74: 2460345823953806874
+    second: BUS Front Panel Indicator|test_pose
+  - first:
+      74: 8448326381358632849
+    second: BUS Front Panel Mid Mid|test_pose
+  - first:
+      74: -2677989402361353188
+    second: BUS Front Panel Sides|test_pose
+  - first:
+      74: -4459558667875375183
+    second: Bus Front Panel Bottom|test_pose
+  - first:
+      74: 5958818251200927484
+    second: Bus Front Panel Center|test_pose
+  - first:
+      74: -7762428270397593395
+    second: BUS Front Panel Lights|test_pose
+  - first:
+      74: -2842837806215371261
+    second: BUS Engine Grill|test_pose
+  - first:
+      74: 3853739400808529835
+    second: BUS Back Engine Door|test_pose
+  - first:
+      74: 8817678862806334191
+    second: BUS Back Engine Panel|test_pose
+  - first:
+      74: -5564431709440665065
+    second: BUS Rear Bot Light Panels|test_pose
+  - first:
+      74: 7623651316308376103
+    second: BUS Rear Light Panels|test_pose
+  - first:
+      74: -3568891194771322173
+    second: BUS Exterior Rear Panel|test_pose
+  - first:
+      74: -3280714101723005167
+    second: BUS Exterior Roof|test_pose
+  - first:
+      74: -1271942122580335715
+    second: Fan Front|test_pose
+  - first:
+      74: -2318524084981388372
+    second: Driver Panel Reverses|test_pose
+  - first:
+      74: -3097239797527153794
+    second: BUS Interior Roof Front|test_pose
+  - first:
+      74: 1126102225138760549
+    second: BUS Roof Dividers|test_pose
+  - first:
+      74: -4194057092961871699
+    second: BUS Interior Floor Front|test_pose
+  - first:
+      74: -145388482668128173
+    second: BUS Interior Roof|test_pose
+  - first:
+      74: 1270389058599922016
+    second: BUS Interior Wall Strips|test_pose
+  - first:
+      74: -4674652061884621562
+    second: BUS Interior Floor|test_pose
+  - first:
+      74: 8138660409733391895
+    second: HINGE Armature|test_pose
+  - first:
+      74: 36421791642237225
+    second: BUS Disabled Ramp|test_pose
+  - first:
+      74: -399523294368019860
+    second: BUS Front Drivers Panel|test_pose
+  - first:
+      74: -1908002524812582380
+    second: BUS Step Hazard bars|test_pose
+  - first:
+      74: -5510795032259019556
+    second: Door n Passenger Split|test_pose
+  - first:
+      74: 431460133253101741
+    second: Interior Rear Corners|test_pose
+  - first:
+      74: -3208921520378427598
+    second: BUS Passenger Light Frame|test_pose
+  - first:
+      74: -5626593336972944302
+    second: Door Light Frame|test_pose
+  - first:
+      74: -9040086306968489103
+    second: CHAIR L Multi Instance|test_pose
+  - first:
+      74: -974909028139678985
+    second: CHAIR Backrest L|test_pose
+  - first:
+      74: -6907097197231002381
+    second: CHAIR Baseplate L|test_pose
+  - first:
+      74: 7561089270375655585
+    second: CHAIR Handle L|test_pose
+  - first:
+      74: -3342906892960458769
+    second: CHAIR stand|test_pose
+  - first:
+      74: 6016822922645829566
+    second: CHAIR Seat L|test_pose
+  - first:
+      74: 5711518954617862716
+    second: CHAIR R Multi Instance|test_pose
+  - first:
+      74: -2982987972191656582
+    second: CHAIR Seat.001|test_pose
+  - first:
+      74: -5785603586346278454
+    second: CHAIR Backrest R|test_pose
+  - first:
+      74: 6793844644929464522
+    second: CHAIR Baseplate R|test_pose
+  - first:
+      74: -8632691455162850555
+    second: CHAIR Handle R|test_pose
+  - first:
+      74: -6557936211769826244
+    second: CHAIR stand R|test_pose
+  - first:
+      74: -2263732848086199901
+    second: BUS Rearwards Chairs|test_pose
+  - first:
+      74: -1775629150129266685
+    second: CHAIR Backrest.002|test_pose
+  - first:
+      74: 6911044753562061317
+    second: CHAIR Backrest.003|test_pose
+  - first:
+      74: -729156759808895920
+    second: CHAIR Seat.002|test_pose
+  - first:
+      74: -856748932826861513
+    second: BUS Poles Holder Duplicate|test_pose
+  - first:
+      74: -2062602569841073355
+    second: BUS Connector T Section|test_pose
+  - first:
+      74: 847787564480396126
+    second: BUS Pole n Chair Mount|test_pose
+  - first:
+      74: -5785015238472936964
+    second: BUS Stopping Casing|test_pose
+  - first:
+      74: 8540602941401396693
+    second: BUS Stopping Button|test_pose
+  - first:
+      74: -1237518090984896640
+    second: Seats R|test_pose
+  - first:
+      74: 814208032989922432
+    second: Seats L|test_pose
+  - first:
+      74: -600923479268129757
+    second: Chair Mount Duplis|test_pose
+  - first:
+      74: -7898735734098417858
+    second: Bus Stop Buttons Dupls|test_pose
+  - first:
+      74: -1060561060011744506
+    second: T Poles Dupls|test_pose
+  - first:
+      74: -7259048353372731408
+    second: BUS Pass Win 4 Glass|test_pose
+  - first:
+      74: 627714603715444342
+    second: BUS Pass Win 3 Glass|test_pose
+  - first:
+      74: -8333691062387802633
+    second: BUS Pass Win 1 Glass|test_pose
+  - first:
+      74: 5717486869595693060
+    second: BUS Pass Win 2 Glass|test_pose
+  - first:
+      74: 6691693905217609482
+    second: BUS Windows Main|test_pose
+  - first:
+      74: 5991698577762505978
+    second: BUS Driver Wind Pane|test_pose
+  - first:
+      74: -8558724039068298879
+    second: BUS Rear Wind Panel|test_pose
+  - first:
+      74: 1295759683814672105
+    second: BUS Window Front|test_pose
+  - first:
+      74: -8837422052195092075
+    second: BUS Front Wind Frame|test_pose
+  - first:
+      74: 582131133327577138
+    second: BUS I Front Win Frame (Panel)|test_pose
+  - first:
+      74: 712636974874275370
+    second: BUS Window Frames|test_pose
+  - first:
+      74: 3545680114863807282
+    second: BUS Indicator Outer Frame|test_pose
+  - first:
+      74: 5552021202849911007
+    second: BUS Indicator Cover|test_pose
+  - first:
+      74: 1775782046348002820
+    second: BUS Indicator Film|test_pose
+  - first:
+      74: -6081931126209022403
+    second: BUS Lights Rim|test_pose
+  - first:
+      74: 4105007374505676426
+    second: BUS Passenger Lights|test_pose
+  - first:
+      74: 3760724920198761613
+    second: BUS Pass Lights Covers|test_pose
+  - first:
+      74: -2220300627718426597
+    second: Indicator Seperator|test_pose
+  - first:
+      74: 1393461837601494745
+    second: BUS Door Main 1|test_pose
+  - first:
+      74: -4207176417346828913
+    second: BUS Door Glass 1|test_pose
+  - first:
+      74: 5517314842957739089
+    second: BUS Door Main 2|test_pose
+  - first:
+      74: 8104849762599446902
+    second: BUS Door Glass 2|test_pose
+  - first:
+      74: 1325403948650842364
+    second: BUS E Door Frame|test_pose
+  - first:
+      74: 5598939100615627656
+    second: BUS Door (F) Frame|test_pose
+  - first:
+      74: 2112963538981879092
+    second: HINGE Armature.001|test_pose
+  - first:
+      74: -2390273113133033108
+    second: BUS E Door Bottom|test_pose
+  - first:
+      74: 1841194082509480583
+    second: BUS E Door top|test_pose
+  - first:
+      74: -2519495328833435884
+    second: BUS E Door Wind|test_pose
+  - first:
+      74: 6886181811391461201
+    second: Door Arm 1|test_pose
+  - first:
+      74: -6839942622030800627
+    second: Door Arm 2|test_pose
+  - first:
+      74: -5527318499952322175
+    second: Door Clip 1|test_pose
+  - first:
+      74: -9173032401854825606
+    second: Door Clip 2|test_pose
+  - first:
+      74: -150384161738478793
+    second: Front Door Top|test_pose
+  - first:
+      74: -7446237716148389050
+    second: Door Handle 1|test_pose
+  - first:
+      74: -2326277386361035273
+    second: Door Arm 1.001|test_pose
+  - first:
+      74: -500959813096528614
+    second: BUS Door Main 1.001|test_pose
+  - first:
+      74: 507065689519049705
+    second: Door Clip 1.001|test_pose
+  - first:
+      74: 1963601484964084535
+    second: Door Clip 2.001|test_pose
+  - first:
+      74: -5143960913738570966
+    second: BUS Door Main 2.001|test_pose
+  - first:
+      74: -5644171228983174583
+    second: Door Arm 2.001|test_pose
+  - first:
+      74: -6976653350701732460
+    second: Door Handle 2.001|test_pose
+  - first:
+      74: -7756251296095849062
+    second: Door Handle 1.001|test_pose
+  - first:
+      74: 9052460236082126027
+    second: Door Handle 2.002|test_pose
+  - first:
+      74: 9174266839639282749
+    second: BUS Door Glass 1.001|test_pose
+  - first:
+      74: -8876145007523649574
+    second: BUS Door Glass 2.001|test_pose
+  - first:
+      74: 4108820811460766635
+    second: BUS Tyre Rim B.l|test_pose
+  - first:
+      74: -8529359025100685833
+    second: BUS Tyre B.l|test_pose
+  - first:
+      74: -1480147332876755596
+    second: BUS Tyre F.l|test_pose
+  - first:
+      74: 3137031642777232518
+    second: BUS Tyre Cover F.l|test_pose
+  - first:
+      74: 7132554202232103904
+    second: BUS Tyre Rim F.l|test_pose
+  - first:
+      74: -6361967963201368647
+    second: BUS Tyre F.r|test_pose
+  - first:
+      74: 8910422075777711673
+    second: BUS Tyre Rim F.r|test_pose
+  - first:
+      74: 1826535357045417453
+    second: BUS Tyre Cover F.r|test_pose
+  - first:
+      74: -3699104957802348329
+    second: BUS Tyre B.r|test_pose
+  - first:
+      74: -7695969268374977790
+    second: BUS Tyre Rim B.r|test_pose
+  - first:
+      74: -7470746414551939569
+    second: CHAIR Backrest.004|test_pose
+  - first:
+      74: -789172710288672551
+    second: CHAIR Back Section|test_pose
+  - first:
+      74: 4953080678003265221
+    second: CHAIR Baseplate.002|test_pose
+  - first:
+      74: -2215126786981234563
+    second: CHAIR Seat.003|test_pose
+  - first:
+      74: 7308844319999399498
+    second: Dashboard Main Side|test_pose
+  - first:
+      74: -6078324139374042927
+    second: Switches - G1|test_pose
+  - first:
+      74: 4332771444354928124
+    second: Switches - G2|test_pose
+  - first:
+      74: -6213112936709966005
+    second: Dials Main Display|test_pose
+  - first:
+      74: 1087451887128910065
+    second: Lights Display|test_pose
+  - first:
+      74: -4315742812307699972
+    second: Dials Covers|test_pose
+  - first:
+      74: -5110824973017659538
+    second: Airbreak Base|test_pose
+  - first:
+      74: 4349187628163448375
+    second: Airbreak Lever|test_pose
+  - first:
+      74: -1864046001843907681
+    second: Airbreak Head|test_pose
+  - first:
+      74: 8125884937152548138
+    second: Gear Selector Buttons|test_pose
+  - first:
+      74: 8924306322729278799
+    second: Handwheel Outer Rim|test_pose
+  - first:
+      74: -2724357770088684746
+    second: Handweehl Upper Rim|test_pose
+  - first:
+      74: 8325381985701684991
+    second: Handwheel Lower Rim|test_pose
+  - first:
+      74: 6523117335228319922
+    second: Handwheel Inner Rim|test_pose
+  - first:
+      74: -1681216354560451980
+    second: Handwheel Horn|test_pose
+  - first:
+      74: -6965608648075933478
+    second: Indicator Sticks|test_pose
+  - first:
+      74: -7900066517407725004
+    second: Steering Column|test_pose
+  - first:
+      74: -5822220442000406
+    second: Dashboard Main Front|test_pose
+  - first:
+      74: 7566591722001223174
+    second: Door Buttons Base|test_pose
+  - first:
+      74: 5601795466183072482
+    second: Door Buttons Button|test_pose
+  - first:
+      74: 4674206874133597714
+    second: HINGE Armature.002|test_pose
+  - first:
+      74: 8588773398215515135
+    second: Side Mirror Frames|test_pose
+  - first:
+      74: -2234058991418888871
+    second: BUS Mirrors Convex|test_pose
+  - first:
+      74: 1325037410763145637
+    second: BUS Mirrors Clips|test_pose
+  - first:
+      74: 6071393534059162387
+    second: BUS Mirror Arms|test_pose
+  - first:
+      74: -6420436614755174009
+    second: BUS Mirrors Hold|test_pose
+  - first:
+      74: -3295786089854208737
+    second: Drivers Cabin|test_pose
+  - first:
+      74: 7560089626521406926
+    second: Passenger Sign Base |test_pose
+  - first:
+      74: 3758565065597681051
+    second: Doors and Windows|test_pose
+  - first:
+      74: -6050812753922652170
+    second: Main Armature|test_pose
+  - first:
+      74: 4316305186133853383
+    second: Details|test_pose
+  - first:
+      74: 820819960848778007
+    second: Indicator VP L|test_pose
+  - first:
+      74: 3176594617422125592
+    second: Indicator VP R|test_pose
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
