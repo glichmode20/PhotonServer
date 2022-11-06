@@ -359,12 +359,12 @@ GameObject:
   - component: {fileID: 2902420758415372042}
   - component: {fileID: 6875988763281371365}
   - component: {fileID: 7720816840991719520}
-  - component: {fileID: 2531241241835092838}
   - component: {fileID: 5860896302982919464}
   - component: {fileID: 4108492321276623538}
   - component: {fileID: 9014526492336335275}
   - component: {fileID: -1544307020557760407}
   - component: {fileID: 8298372613590151995}
+  - component: {fileID: -1636497019729236769}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -425,18 +425,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Campos: {fileID: 2834775818557239658}
---- !u!114 &2531241241835092838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7351449019781588934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3926d7157e30408499abd9ff4ca577e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5860896302982919464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,6 +507,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7351449019781588934}
   m_CullTransparentMesh: 1
+--- !u!114 &-1636497019729236769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7351449019781588934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f46c03b38ce7f4f8d82401ec2892ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7587066294906737586
 PrefabInstance:
   m_ObjectHideFlags: 0
