@@ -168,7 +168,7 @@ public class Test : MonoBehaviour
             // 손님 켜지기
             customer.SetActive(true);
 
-            customerTxt.text = "손님 왔음";
+            //customerTxt.text = "손님 왔음";
         }
        
     }
