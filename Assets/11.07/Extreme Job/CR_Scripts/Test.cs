@@ -9,11 +9,6 @@ public class Test : MonoBehaviour
     public GameObject customerUI;
     // 우측 상단 손님 문구 가져오는 변수
     public GameObject customerUIText;
-
-    // 만든 치킨 갯수 확인
-    public GameObject ChickenBtn1;
-    public GameObject ChickenBtn2;
-    public GameObject ChickenBtn3;
     
 
     public GameObject customer;
@@ -48,13 +43,9 @@ public class Test : MonoBehaviour
         // 만약 마우스 왼쪽 클릭을 했을 때
         if (Input.GetMouseButtonDown(0))
         {
-       
             // 레이를 쐈을 때
             if (Physics.Raycast(ray, out hit))
             {
-
-                print(hit.transform.name);
-
                 // 레이의 끝에 닿은 오브젝트의 태그가 Customer라면
                 if (hit.transform.gameObject.tag == "Customer")
                 {
@@ -62,10 +53,6 @@ public class Test : MonoBehaviour
                     {
                         CustomerText();
                         isCustomer = false;
-
-                        customerUI.SetActive(true);
-                        // 손님 대화 창 켜기
-                       Invoke("UISetActive", 3f);
                     }
 
                     // 치킨 카운트가 1이고 치킨 1이라는 텍스트가 떠 있다면
@@ -74,9 +61,7 @@ public class Test : MonoBehaviour
                         StartCoroutine(AnimTime());
                        
                         print("감사합니다");
-
-                        
-                        customerTxt.text = "감사합니다";
+                        customerTxt.text = "";
                         isCustomer = true;
                         CounterTrigger.count = 0;
                         print(CounterTrigger.count + "치킨 카운트 초기화 했는지");
@@ -98,7 +83,7 @@ public class Test : MonoBehaviour
                     {
                         StartCoroutine(AnimTime());
                         print("감사합니다");
-                        customerTxt.text = "감사합니다";
+                        customerTxt.text = "";
                         isCustomer = true;
                         anim.SetTrigger("Greetings");
                         CounterTrigger.count = 0;
@@ -131,7 +116,7 @@ public class Test : MonoBehaviour
                     {
                         StartCoroutine(AnimTime());
                         print("감사합니다");
-                        customerTxt.text = "감사합니다";
+                        customerTxt.text = "";
                         isCustomer = true;
                         CounterTrigger.count = 0;
                         GameObject.Find("@ResetManager").GetComponent<ResetManager>().Reset();
@@ -186,11 +171,5 @@ public class Test : MonoBehaviour
             customerTxt.text = "손님 왔음";
         }
        
-    }
-
-    void UISetActive()
-    {
-        //UI 켜기
-        customerUI.SetActive(false);
     }
 }
