@@ -53,7 +53,7 @@ public class Mission1 : MonoBehaviour
     TestMission4 mission4;
     MenualUI menual;
 
-    Button button;
+    BtnButton button;
 
     // 잡힌 오브젝트
     public Transform grabbedObject = null;
@@ -68,7 +68,7 @@ public class Mission1 : MonoBehaviour
        
         mission3 = GameObject.Find("Water").GetComponentInChildren<TestMission3>();
         // ******** 태그를 바꿔줘야함 ***********
-        button = GameObject.FindGameObjectWithTag("Button").GetComponent<Button>();
+        button = GameObject.FindGameObjectWithTag("Button").GetComponent<BtnButton>();
         menual = GameObject.Find("@Canvas").GetComponent<MenualUI>();
 
   
@@ -84,7 +84,7 @@ public class Mission1 : MonoBehaviour
       
         // 볼 위치
         bowl = GameObject.FindGameObjectWithTag("BowlPos");
-        print(bowl);
+        //print(bowl);
     }
 
     public void FindPot()

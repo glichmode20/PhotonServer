@@ -94,9 +94,9 @@ public class Fryer : MonoBehaviour
         oilcolor = oil.GetComponent<Renderer>();
 
         // 치킨 오브젝트에서 렌더러 찾아오기
-        ck1color = ck1.GetComponent<Renderer>();
-        ck2color = ck2.GetComponent<Renderer>();
-        ck3color = ck3.GetComponent<Renderer>();
+        ck1color = ck1.transform.GetChild(0).GetComponent<Renderer>();
+        ck2color = ck2.transform.GetChild(0).GetComponent<Renderer>();
+        ck3color = ck3.transform.GetChild(0).GetComponent<Renderer>();
 
         // 치킨 색 변하는 스크립트 담기(치킨 익은 거)
         ct1 = ck1.GetComponent<ChickenTrigger>();
@@ -113,59 +113,11 @@ public class Fryer : MonoBehaviour
         }
     }
 
-    public bool isCkOver = true;
-    void ckOver()
-    {
-        // 만약 첫 번째 치킨 조각이 타지 않고 3초가 지났다면
-        if (isckk1 == false && curTime1 > 3.5f)
-        {
-            // 치킨 색을 검은색으로 바꾼다
-            ck1color.material.color = new Color(0, 0, 0, 1);
-            print("검은색으로 변함");
-            ckCount++;
-        }
-        // 만약 두 번째 치킨 조각이 타지 않고 3.5초가 지났다면
-        if (isckk2 == false && curTime1 > 4f)
-        {
-            // 치킨 색을 검은색으로 바꾼다
-            ck2color.material.color = new Color(0, 0, 0, 1);
-            ckCount++;
-        }
-        // 만약 세 번째 치킨 조각이 타지 않고 4초가 지났다면
-        if (isckk3 == false && curTime1 > 4.5f)
-        {
-            // 치킨 색을 검은색으로 바꾼다
-            ck3color.material.color = new Color(0, 0, 0, 1);
-            ckCount++;
-
-            isCkOver = false;
-        }
-
-    }
 
     // Update is called once per frame
     void Update()
     {
-        // 만약 치킨이 다 익은 상태라면
-        if (ct1.isFry1 == true && ct2.isFry2 == true && ct3.isFry3 == true)
-        {
-            // 시간이 흐른다
-            curTime1 += Time.deltaTime;
-           
-
-            if (isCkOver == true)
-            {
-                ckOver();
-            }
-        }
-
-
-        // 태우고 점수 깎이기
-        if (isAllScore == true && ckCount == 3)
-        {
-            ScoreManager.instance.GetScore();
-            isAllScore = false;
-        }
+     
 
 
 
@@ -253,16 +205,17 @@ public class Fryer : MonoBehaviour
                     { //눌렀을때 누르기전 상태가 접시위에 있는 상태였다Vector3면
                         ck1.transform.position = oilck1Pos.transform.position;
                         moveCKcheck[0] = false; //치킨의 상태는 기름으로 이동되었음
-
+                        isck1 = false;
                     }
-                    else if (moveCKcheck[0] == false && isck1 == true && isMoveCk1 == true)
+                    else if (moveCKcheck[0] == false && isck1 == false && isMoveCk1 == true)
                     {
-                        isckk1 = true;
                         //눌렀을때 누르기전 상태가 기름에 있는 상태였다면
                         ck1.transform.position = ck1pos.transform.position;
                         //접시로 이동
-                        isck1 = false;
+                       
+                        isckk1 = false;
                         isMoveCk1 = false;
+                        StopCoroutine(ct1.CkStop());
                     }
 
                 }
@@ -273,13 +226,15 @@ public class Fryer : MonoBehaviour
                     {
                         ck2.transform.position = oilck2Pos.transform.position;
                         moveCKcheck[1] = false;
-                    }
-                    else if (moveCKcheck[1] == false && isck2 == true && isMoveCk2 == true)
-                    {
-                        isckk2 = true;
-                        ck2.transform.position = ck2pos.transform.position;
                         isck2 = false;
+                    }
+                    else if (moveCKcheck[1] == false && isck2 == false && isMoveCk2 == true)
+                    {
+                        ck2.transform.position = ck2pos.transform.position;
+                       
+                        isckk2 = false;
                         isMoveCk2 = false;
+                        StopCoroutine(ct2.CkStop());
                     }
 
                 }
@@ -289,13 +244,15 @@ public class Fryer : MonoBehaviour
                     {
                         ck3.transform.position = oilck3Pos.transform.position;
                         moveCKcheck[2] = false;
+                         isck3 = false;
                     }
-                    else if (moveCKcheck[2] == false && isck3 == true && isMoveCk3 == true)
+                    else if (moveCKcheck[2] == false && isck3 == false && isMoveCk3 == true)
                     {
-                        isckk3 = true;
                         ck3.transform.position = ck3pos.transform.position;
-                        isck3 = false;
+                       
+                        isckk3 = false;
                         isMoveCk3 = false;
+                        StopCoroutine(ct3.CkStop());
                     }
                 }
 

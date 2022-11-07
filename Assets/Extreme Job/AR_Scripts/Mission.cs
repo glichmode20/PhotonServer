@@ -18,7 +18,7 @@ public class Mission : MonoBehaviour
     TestMission3 mission3;
     TestMission4 mission4;
 
-    Button button;
+    BtnButton button;
 
     // 잡힌 오브젝트
     Transform grabbedObject = null;
@@ -33,7 +33,7 @@ public class Mission : MonoBehaviour
         mission2 = GameObject.Find("Pot").GetComponentInChildren<TestMission2>();
         mission3 = GameObject.Find("Water").GetComponentInChildren<TestMission3>();
         mission4 = GameObject.Find("Glass bowl").GetComponentInChildren<TestMission4>();
-        button = GameObject.FindGameObjectWithTag("Button").GetComponent<Button>();
+        button = GameObject.FindGameObjectWithTag("Button").GetComponent<BtnButton>();
     
     }
 

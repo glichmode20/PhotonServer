@@ -29,7 +29,6 @@ public class CounterTrigger : MonoBehaviour
         {
             // +1
             count++;
-            print(count + "현재 치킨 카운트");
 
             collision.gameObject.GetComponent<Rigidbody>().isKinematic = true;
         }

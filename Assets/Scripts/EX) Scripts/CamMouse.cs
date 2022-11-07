@@ -5,12 +5,6 @@ using Photon.Pun;
 
 public class CamMouse : MonoBehaviourPun
 {
-    float wheelValue = 0;
-
-    Vector3 nearPosition;
-    Vector3 farPosition;
-
-
     float rotX;
     float rotY;
 
@@ -28,9 +22,6 @@ public class CamMouse : MonoBehaviourPun
         {
             //camPos를 활성화
             Campos.gameObject.SetActive(true);
-
-            //nearPosition = Campos.transform.position;
-
         }
         else if(photonView.IsMine == false)
         {
@@ -54,15 +45,6 @@ public class CamMouse : MonoBehaviourPun
         transform.localEulerAngles = new Vector3(0, rotX, 0);
         Campos.localEulerAngles = new Vector3(-rotY, 0, 0);
 
-
-        //farPosition = nearPosition + (Campos.transform.forward * -5);
-
-        //wheelValue -= Input.GetAxis("Mouse ScrollWheel");
-        //wheelValue = Mathf.Clamp(wheelValue, 0, 1.0f);
-
-        //Vector3 CamPosition = Vector3.Lerp(nearPosition, farPosition, wheelValue);
-
-        //Campos.transform.Position = CamPosition;
 
     }
 }

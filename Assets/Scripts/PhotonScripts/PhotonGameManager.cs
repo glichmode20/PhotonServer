@@ -6,8 +6,9 @@ using Photon.Pun;
 
 public class PhotonGameManager : MonoBehaviourPun, IPunObservable
 {
-    public Transform PlayerSpwan;
-    public GameObject player;
+   public Transform PlayerSpwan;
+   public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,4 +32,6 @@ public class PhotonGameManager : MonoBehaviourPun, IPunObservable
     {
         throw new System.NotImplementedException();
     }
+
+   
 }

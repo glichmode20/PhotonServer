@@ -12,7 +12,7 @@ public class ScoreManager : MonoBehaviour
 
     public static ScoreManager instance;
     public Text CurScoreUI;
-    int Maxscore = 100;
+    public int Maxscore = 100;
 
     private void Awake()
     {
@@ -38,6 +38,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         CurScore = Maxscore;
+
     }
 
  

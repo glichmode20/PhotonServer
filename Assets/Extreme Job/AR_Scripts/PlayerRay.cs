@@ -32,7 +32,6 @@ public class PlayerRay : MonoBehaviour
         // Ray 가 닿으면
         if (Physics.Raycast(ray, out hitInfo, maxRayDistance, layer))
         {
-            print(hitInfo.collider.name);
 
             // 닿은 Object 의 Outline 스크립트를 컴포넌트로 가져온다.
             Outline outline = hitInfo.transform.GetComponent<Outline>();

@@ -63,8 +63,6 @@ public class ResetManager : MonoBehaviour
 
         fryers.isAllScore = true;
         fryers.isbollCheck = true;
-        // **************
-        fryers.isCkOver = true;
 
         for (int i = 0; i < fryers.moveCKcheck.Length; i++)
         {

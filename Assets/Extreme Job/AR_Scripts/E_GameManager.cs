@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-using Photon.Realtime;
 using UnityEngine.UI;
 
 public class E_GameManager : MonoBehaviourPunCallbacks
@@ -183,53 +182,14 @@ public class E_GameManager : MonoBehaviourPunCallbacks
     // ¿£µù
     void Ending()
     {
-        //isEnd = true;
-
-        if (!isEnd)
+        isEnd = true;
+        
+        if(isEnd)
         {
 
-            //PhotonNetwork.LoadLevel("Photon2");
-            returnRoomName = "±ØÇÑ Á÷¾÷";
-            PhotonNetwork.LeaveRoom(false);
-            //if (PhotonNetwork.GetCustomRoomList(TypedLobby.Default, returnRoomName))
-            //{
-            // PhotonNetwork.JoinRoom(returnRoomName);
-
-            //}
-            isEnd = true;
-        }
-
-    }
-
-    string returnRoomName;
-
-    public override void OnConnectedToMaster()
-    {
-        base.OnConnectedToMaster();
-        PhotonNetwork.JoinLobby();
-        print("Master Master Master Master Master ");
-    }
-    public override void OnJoinedLobby()
-    {
-        base.OnJoinedLobby();
-        PhotonNetwork.JoinRoom(returnRoomName);
-
-        print("Lobby Lobby Lobby Lobby Lobby ");
-    }
-
-
-    public override void OnJoinedRoom()
-    {
-        base.OnJoinedRoom();
-        print("Room Room Room Room Room : " + returnRoomName);
-
-        if (returnRoomName == "º¸ÀÌ´Â ¾îµÒ")
-        {
-            PhotonNetwork.LoadLevel("Photon");
-        }
-        else if (returnRoomName == "±ØÇÑ Á÷¾÷")
-        {
             PhotonNetwork.LoadLevel("Photon2");
         }
+
     }
+
 }

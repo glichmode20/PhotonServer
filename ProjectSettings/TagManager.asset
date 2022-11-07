@@ -42,7 +42,6 @@ TagManager:
   - StartOil
   - TimeBtn
   - FryerBtn
-  - Ground
   layers:
   - Default
   - TransparentFX
