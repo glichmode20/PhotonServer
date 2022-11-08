@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
+
+
     float speed = 5;
     float yVelocity;
 
@@ -15,12 +17,17 @@ public class Move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      
+
         cc = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Cursor.visible = false;
+
+
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
@@ -32,7 +39,7 @@ public class Move : MonoBehaviour
        
         dir.y = yVelocity;
 
-     //   dir = Camera.main.transform.TransformDirection(dir);
+        // dir = Camera.main.transform.TransformDirection(dir);
 
         cc.Move(dir * speed * Time.deltaTime);
         
