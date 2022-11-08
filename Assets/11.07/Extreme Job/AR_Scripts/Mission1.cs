@@ -46,6 +46,10 @@ public class Mission1 : MonoBehaviour
     public int count = 0;
     int maxcount = 1;
 
+    [Header("메뉴 이미지")]
+    public GameObject menuImage1;
+    public GameObject menuImage2;
+
     //스크립트 불러오기
     TestMission mission;
     TestMission2 mission2;
@@ -65,7 +69,15 @@ public class Mission1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+
+
+        //********* 메뉴 암기 **********
+        menuImage1.SetActive(true);
+        menuImage2.SetActive(true);
+
+        Invoke("menuImage", 5f);
+
+
         mission3 = GameObject.Find("Water").GetComponentInChildren<TestMission3>();
         // ******** 태그를 바꿔줘야함 ***********
         button = GameObject.FindGameObjectWithTag("Button").GetComponent<BtnButton>();
@@ -124,6 +136,7 @@ public class Mission1 : MonoBehaviour
 
     void CatchObject()
     {
+
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
         RaycastHit hit;
 
@@ -131,9 +144,8 @@ public class Mission1 : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, 10, layer))
         {
-            itemName.text = "정보 : " + hit.collider.name;
-            //********* 메뉴 암기 **********
-            //menual.leImage();
+            // itemName.text = "정보 : " + hit.collider.name;
+
 
             #region Mission One
 
@@ -142,6 +154,8 @@ public class Mission1 : MonoBehaviour
             {
                 if (hit.transform.CompareTag("Chicken"))
                 {
+                    itemName.text = "정보 : 치킨";
+
                     bowl = GameObject.FindGameObjectWithTag("BowlPos");
                     hit.transform.parent = bowl.transform;
                     hit.transform.SetAsFirstSibling();
@@ -193,6 +207,8 @@ public class Mission1 : MonoBehaviour
 
                 if (hit.transform.CompareTag("Milk"))
                 {
+                    itemName.text = "정보 : 우유";
+
                     Menual4.text = "K를 눌러 선에 맞춰 우유를 채우시오";
 
                     hit.transform.parent = position.transform;
@@ -236,6 +252,9 @@ public class Mission1 : MonoBehaviour
             {
                 if (hit.transform.CompareTag("Pot"))
                 {
+
+                    itemName.text = "정보 : 냄비";
+
                     Menual.text = "K를 눌러 소스를 채우시오";
                     
                     hit.transform.parent = pot.transform;
@@ -270,6 +289,8 @@ public class Mission1 : MonoBehaviour
                 {
                     hit.transform.parent = position.transform;
 
+                    itemName.text = "정보 : 간장";
+
                     hit.transform.SetAsFirstSibling();
                     //손 안에 들어가게 한다
                     hit.transform.localPosition = Vector3.zero;
@@ -282,8 +303,9 @@ public class Mission1 : MonoBehaviour
                 }
                 if (hit.transform.CompareTag("Sugar"))
                 {
-
                     hit.transform.parent = position.transform;
+
+                    itemName.text = "정보 : 설탕";
 
                     hit.transform.SetAsFirstSibling();
                     //손 안에 들어가게 한다
@@ -296,8 +318,9 @@ public class Mission1 : MonoBehaviour
                 }
                 if (hit.transform.CompareTag("Pepper"))
                 {
-
                     hit.transform.parent = position.transform;
+
+                    itemName.text = "정보 : 후추";
 
                     hit.transform.SetAsFirstSibling();
                     //손 안에 들어가게 한다
@@ -311,6 +334,8 @@ public class Mission1 : MonoBehaviour
                 if (hit.transform.CompareTag("Garlic"))
                 {
                     hit.transform.parent = position.transform;
+
+                    itemName.text = "정보 : 다진 마늘";
 
                     hit.transform.SetAsFirstSibling();
                     //손 안에 들어가게 한다
@@ -327,6 +352,8 @@ public class Mission1 : MonoBehaviour
                 {
                     hit.transform.parent = position.transform;
 
+                    itemName.text = "정보 : 물엿";
+
                     hit.transform.SetAsFirstSibling();
                     //손 안에 들어가게 한다
                     hit.transform.localPosition = Vector3.zero;
@@ -341,7 +368,9 @@ public class Mission1 : MonoBehaviour
                 if (hit.transform.CompareTag("Vinegar"))
                 {
                     hit.transform.parent = position.transform;
-
+                    
+                    itemName.text = "정보 : 식초";
+                    
                     hit.transform.SetAsFirstSibling();
                     //손 안에 들어가게 한다
                     hit.transform.localPosition = Vector3.zero;
@@ -354,6 +383,8 @@ public class Mission1 : MonoBehaviour
                 if (hit.transform.CompareTag("Chilli"))
                 {
                     hit.transform.parent = position.transform;
+
+                    itemName.text = "정보 : 고추 가루";
 
                     hit.transform.SetAsFirstSibling();
 
@@ -531,6 +562,8 @@ public class Mission1 : MonoBehaviour
                 {
                     hit.transform.parent = position.transform;
 
+                    itemName.text = "정보 : 튀김 가루";
+
                     hit.transform.SetAsFirstSibling();
                     //손 안에 들어가게 한다
                     hit.transform.localPosition = Vector3.zero;
@@ -544,6 +577,8 @@ public class Mission1 : MonoBehaviour
                 if (hit.transform.CompareTag("Liquid"))
                 {
                     hit.transform.parent = position.transform;
+
+                    itemName.text = "정보 : 물";
 
                     hit.transform.SetAsFirstSibling();
                     //손 안에 들어가게 한다
@@ -764,5 +799,11 @@ public class Mission1 : MonoBehaviour
         Destroy(Powder, 1f);
         Destroy(Milk, 1f);
 
+    }
+
+    void menuImage()
+    {
+        menuImage1.SetActive(false);
+        menuImage2.SetActive(false);
     }
 }
