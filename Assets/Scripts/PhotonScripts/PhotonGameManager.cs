@@ -9,7 +9,7 @@ public class PhotonGameManager : MonoBehaviourPun, IPunObservable
    public Transform PlayerSpwan;
    public GameObject player;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         player = PhotonNetwork.Instantiate("Player", PlayerSpwan.position, Quaternion.identity);

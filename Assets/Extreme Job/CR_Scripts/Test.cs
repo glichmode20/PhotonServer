@@ -7,13 +7,21 @@ public class Test : MonoBehaviour
 {
     public List<string> customerText = new List<string>() { "치킨 한 마리 주세요", "치킨 두 마리 주세요", "치킨 세 마리 주세요" };
     public GameObject customerUI;
+
+    public GameObject menuImage1;
+    public GameObject menuImage2;
+
     // 우측 상단 손님 문구 가져오는 변수
     public GameObject customerUIText;
 
+
+    // 시작, 손님에게 가란 UI
+    public Text startQuest;
+
     public GameObject UIChicken1;
     public GameObject UIChicken2;
-    public GameObject UIChicken3;    
-    
+    public GameObject UIChicken3;
+
     public GameObject UIChickenbg1;
     public GameObject UIChickenbg2;
     public GameObject UIChickenbg3;
@@ -23,7 +31,9 @@ public class Test : MonoBehaviour
     public Animator anim;
 
     Text customerTxt;
-    
+
+    int InvokeCount = 0;
+
     // 손님 색
     Renderer curstomerColor;
     // Start is called before the first frame update
@@ -35,7 +45,9 @@ public class Test : MonoBehaviour
         customerTxt = customerUIText.GetComponent<Text>();
         // 손님 색 불러오기
         curstomerColor = customer.GetComponent<Renderer>();
-        
+
+        startQuest.text = "손님에게 주문을 받으시오.";
+
     }
 
     bool isCustomer = true;
@@ -63,18 +75,26 @@ public class Test : MonoBehaviour
                         // 손님 대화창 켜기
                         customerUI.SetActive(true);
                         // 대화창 끄기
-                        Invoke("invokeUI", 3f);
+                        Invoke("invokeUI", 2f);
+                        startQuest.text = "";
+
+                        //********* 메뉴 암기 **********
+
+                        Invoke("OnMenuImage", 3f);
+                        Invoke("menuImage", 8f);
+                     
+
                     }
 
                     // 치킨 카운트가 1이고 치킨 1이라는 텍스트가 떠 있다면
-                    if (CounterTrigger.count == 1 && customerTxt.text == "치킨 1")
+                    if (CounterTrigger.count == 1 && customerTxt.text == "치킨 한 마리 주세요")
                     {
                         StartCoroutine(AnimTime());
 
                         // 손님 대화창 켜기
                         customerUI.SetActive(true);
                         // 대화창 끄기
-                        Invoke("invokeUI", 3f);
+                        Invoke("invokeUI", 2f);
 
                         // 치킨 카운트가 1이 되면 켜기
                         if(CounterTrigger.count == 1)
@@ -92,7 +112,7 @@ public class Test : MonoBehaviour
                         GameObject.Find("@ResetManager").GetComponent<ResetManager>().CountReset();
                     }
 
-                    if (CounterTrigger.count == 1 && customerTxt.text == "치킨 2")
+                    if (CounterTrigger.count == 1 && customerTxt.text == "치킨 두 마리 주세요")
                     {
                         print("하나 더 남았듬");
                         ck.SetActive(false);
@@ -110,7 +130,7 @@ public class Test : MonoBehaviour
                     }
 
                     // 치킨 카운트가 1이고 치킨 1이라는 텍스트가 떠 있다면
-                    if (CounterTrigger.count == 2 && customerTxt.text == "치킨 2")
+                    if (CounterTrigger.count == 2 && customerTxt.text == "치킨 두 마리 주세요")
                     {
                         StartCoroutine(AnimTime());
 
@@ -143,7 +163,7 @@ public class Test : MonoBehaviour
                     }
 
 
-                    if (CounterTrigger.count == 1 && customerTxt.text == "치킨 3")
+                    if (CounterTrigger.count == 1 && customerTxt.text == "치킨 세 마리 주세요")
                     {
                         // 치킨 카운트가 1이면 UIChicken1 켜기
                         if (CounterTrigger.count == 1)
@@ -159,7 +179,7 @@ public class Test : MonoBehaviour
                         GameObject.Find("@ResetManager").GetComponent<ResetManager>().CountReset();
                     }
 
-                    if (CounterTrigger.count == 2 && customerTxt.text == "치킨 3")
+                    if (CounterTrigger.count == 2 && customerTxt.text == "치킨 세 마리 주세요")
                     {
 
                         // 치킨 카운트가 2이면 UIChicken2 켜기
@@ -179,7 +199,7 @@ public class Test : MonoBehaviour
 
 
                     // 치킨 카운트가 1이고 치킨 1이라는 텍스트가 떠 있다면
-                    if (CounterTrigger.count == 3 && customerTxt.text == "치킨 3")
+                    if (CounterTrigger.count == 3 && customerTxt.text == "치킨 세 마리 주세요")
                     {
                         StartCoroutine(AnimTime());
 
@@ -217,14 +237,14 @@ public class Test : MonoBehaviour
 
         if(customerText[rand] == "치킨 한 마리 주세요")
         {
-            customerTxt.text = "치킨 1";
+            customerTxt.text = "치킨 한 마리 주세요";
 
             UIChickenbg1.SetActive(true);
         }
 
         if (customerText[rand] == "치킨 두 마리 주세요")
         {
-            customerTxt.text = "치킨 2";
+            customerTxt.text = "치킨 두 마리 주세요";
 
             UIChickenbg1.SetActive(true);
             UIChickenbg2.SetActive(true);
@@ -232,7 +252,7 @@ public class Test : MonoBehaviour
 
         if (customerText[rand] == "치킨 세 마리 주세요")
         {
-            customerTxt.text = "치킨 3";
+            customerTxt.text = "치킨 세 마리 주세요";
 
             UIChickenbg1.SetActive(true);
             UIChickenbg2.SetActive(true);
@@ -278,4 +298,20 @@ public class Test : MonoBehaviour
     {
         customerUI.SetActive(false);
     }
+
+    void menuImage()
+    {
+        menuImage1.SetActive(false);
+        menuImage2.SetActive(false);
+
+    }
+
+    void OnMenuImage()
+    {
+        menuImage1.SetActive(true);
+        menuImage2.SetActive(true);
+
+    }
+
+   
 }

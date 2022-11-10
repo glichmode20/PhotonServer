@@ -51,7 +51,7 @@ public class CustomerUI : MonoBehaviour
                     print("치킨 한 마리 주세요");
 
                     // 원래 손님 왔음이란 텍스트를 치킨 1로 바꾸기
-                    customerText.text = "치킨 1";
+                    customerText.text = "치킨 한 마리 주세요";
 
                     TextPlay();
                 }
@@ -69,7 +69,7 @@ public class CustomerUI : MonoBehaviour
     void TextPlay()
     {
         // 치킨 카운트가 1이고 치킨 1이라는 텍스트가 떠 있다면
-        if (CounterTrigger.count == 1 && customerText.text == "치킨 1")
+        if (CounterTrigger.count == 1 && customerText.text == "치킨 한 마리 주세요")
         {
             // 손님 끄기
             customer.SetActive(false);
@@ -81,7 +81,7 @@ public class CustomerUI : MonoBehaviour
         }
        
         // 치킨 카운트가 1보다 크고 치킨 1이라는 텍스트가 떠 있다면
-        else if (CounterTrigger.count > 1 && customerText.text == "치킨 1")
+        else if (CounterTrigger.count > 1 && customerText.text == "치킨 한 마리 주세요")
         {
             print("이거 아니잖아요!");
             ck.SetActive(false);

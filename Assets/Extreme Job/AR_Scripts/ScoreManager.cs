@@ -30,7 +30,7 @@ public class ScoreManager : MonoBehaviour
             Maxscore = value;
 
 
-            CurScoreUI.text = "Score : " + CurScore + "";
+            CurScoreUI.text = "치킨 완성도 : " + CurScore + "";
         }
     }
 

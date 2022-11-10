@@ -8,6 +8,7 @@ public class E_GameManager : MonoBehaviourPunCallbacks
 {
     public static E_GameManager instance;
 
+
     [Header("생성할 오브젝트")]
     public GameObject Bowl;
     public GameObject Chicken;
@@ -46,15 +47,15 @@ public class E_GameManager : MonoBehaviourPunCallbacks
     // 성공
     [Header("시간")]
     public Text timeText;
-    [SerializeField]
+    
     // 플레이 시간
-    int min = 1;
-    [SerializeField]
-    float sec;
+    public int min = 5;
+    public float sec;
 
     [Header("엔딩")]
     public bool isEnd = false;
 
+    public bool isCheck = false;
 
     private void Awake()
     {
@@ -66,6 +67,7 @@ public class E_GameManager : MonoBehaviourPunCallbacks
     {
         ProduceSauce();
         Produce();
+
 
         // timeText.text = string.Format("{0:D2}:{1:D2}", min, (int)sec);
     }
@@ -86,7 +88,11 @@ public class E_GameManager : MonoBehaviourPunCallbacks
         {
             min = 0;
             sec = 0;
-            Ending();
+
+            //if(isCheck == true)
+            //{
+                Ending();
+            //}
 
             return;
         }
@@ -106,22 +112,6 @@ public class E_GameManager : MonoBehaviourPunCallbacks
         timeText.text = string.Format("{0:D2}:{1:D2}", min, (int)sec);
     }
 
-
-    //public void FindSauce()
-    //{
-    //    // 소스 오브젝트 찾기
-    //    Soy = GameObject.FindGameObjectWithTag("Soy");
-    //    Sugar = GameObject.FindGameObjectWithTag("Sugar");
-    //    Pepper = GameObject.FindGameObjectWithTag("Pepper");
-    //    Garlic = GameObject.FindGameObjectWithTag("Garlic");
-    //    Syrup = GameObject.FindGameObjectWithTag("Syrup");
-    //    Vinegar = GameObject.FindGameObjectWithTag("Vinegar");
-    //    Chilli = GameObject.FindGameObjectWithTag("Chilli");
-    //    Liquid = GameObject.FindGameObjectWithTag("Liquid");
-    //    Powder = GameObject.FindGameObjectWithTag("Powder");
-    //    Milk = GameObject.FindGameObjectWithTag("Milk");
-
-    //}
 
     // 다시 새롭게 시작
     public void Produce()
@@ -160,36 +150,55 @@ public class E_GameManager : MonoBehaviourPunCallbacks
 
     }
 
-    //public void DestorySauce()
-    //{
-    //    // 하이어라키창에 있는 소스들을 찾아 삭제
-    //    gameObject.GetComponent<Mission1>().FindSauce();
-
-    //    Destroy(Soy, 3f);
-    //    Destroy(Sugar, 3f);
-    //    Destroy(Pepper, 3f);
-    //    Destroy(Garlic, 3f);
-    //    Destroy(Syrup, 3f);
-    //    Destroy(Vinegar, 3f);
-    //    Destroy(Chilli, 3f);
-    //    Destroy(Liquid, 3f);
-    //    Destroy(Powder, 3f);
-    //    Destroy(Milk, 3f);
 
 
-    //}
-
-    // 엔딩
-    void Ending()
+    //엔딩
+    public void Ending()  
     {
-        isEnd = true;
-        
-        if(isEnd)
+        //isEnd = true;
+
+        if (!isEnd)
         {
 
-            PhotonNetwork.LoadLevel("Photon2");
+            returnRoomName = "극한 직업";
+            PhotonNetwork.LeaveRoom(false);
+            
+            isEnd = true;
         }
 
+    }
+
+    string returnRoomName;
+
+    public override void OnConnectedToMaster()
+    {
+        base.OnConnectedToMaster();
+        PhotonNetwork.JoinLobby();
+        print("Master Master Master Master Master ");
+    }
+    public override void OnJoinedLobby()
+    {
+        base.OnJoinedLobby();
+        PhotonNetwork.JoinRoom(returnRoomName);
+
+        print("Lobby Lobby Lobby Lobby Lobby ");
+    }
+
+
+
+    public override void OnJoinedRoom()
+    {
+        base.OnJoinedRoom();
+        print("Room Room Room Room Room : " + returnRoomName);
+
+        if (returnRoomName == "보이는 어둠")
+        {
+            PhotonNetwork.LoadLevel("Photon");
+        }
+        else if (returnRoomName == "극한 직업")
+        {
+            PhotonNetwork.LoadLevel("Photon2");
+        }
     }
 
 }

@@ -30,9 +30,7 @@ public class Mission1 : MonoBehaviour
     [Header("설명 텍스트")]
     public Text itemName;
     public Text Menual;
-    public Text Menual2;
-    public Text Menual3;
-    public Text Menual4;
+
 
     [Header("재료 이름 저장 배열")]
     // 소스
@@ -46,9 +44,6 @@ public class Mission1 : MonoBehaviour
     public int count = 0;
     int maxcount = 1;
 
-    [Header("메뉴 이미지")]
-    public GameObject menuImage1;
-    public GameObject menuImage2;
 
     //스크립트 불러오기
     TestMission mission;
@@ -69,14 +64,6 @@ public class Mission1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
-        //********* 메뉴 암기 **********
-        menuImage1.SetActive(true);
-        menuImage2.SetActive(true);
-
-        Invoke("menuImage", 5f);
-
 
         mission3 = GameObject.Find("Water").GetComponentInChildren<TestMission3>();
         // ******** 태그를 바꿔줘야함 ***********
@@ -154,7 +141,7 @@ public class Mission1 : MonoBehaviour
             {
                 if (hit.transform.CompareTag("Chicken"))
                 {
-                    itemName.text = "정보 : 치킨";
+                    itemName.text = "아이템 : 치킨";
 
                     bowl = GameObject.FindGameObjectWithTag("BowlPos");
                     hit.transform.parent = bowl.transform;
@@ -172,6 +159,8 @@ public class Mission1 : MonoBehaviour
 
                 if (hit.transform.CompareTag("OtherChicken"))
                 {
+
+
                     // 물 안에 들어가게 한다
                     hit.transform.parent = water.transform;
 
@@ -207,9 +196,9 @@ public class Mission1 : MonoBehaviour
 
                 if (hit.transform.CompareTag("Milk"))
                 {
-                    itemName.text = "정보 : 우유";
+                    itemName.text = "아이템 : 우유";
 
-                    Menual4.text = "K를 눌러 선에 맞춰 우유를 채우시오";
+                    Menual.text = "K를 눌러 선에 맞춰 우유를 채우시오";
 
                     hit.transform.parent = position.transform;
                     hit.transform.SetAsFirstSibling();
@@ -241,6 +230,12 @@ public class Mission1 : MonoBehaviour
                 // GameObject.FindGameObjectWithTag("Bowl").transform.tag = "OtherBowl";
 
                 print("우유 넣기 실행 가능한 상태");
+
+                if(Input.GetKeyDown(KeyCode.K))
+                {
+                    Invoke("NextText", 5f);
+                }
+
             }
 
 
@@ -253,10 +248,8 @@ public class Mission1 : MonoBehaviour
                 if (hit.transform.CompareTag("Pot"))
                 {
 
-                    itemName.text = "정보 : 냄비";
+                    itemName.text = "아이템 : 냄비";
 
-                    Menual.text = "K를 눌러 소스를 채우시오";
-                    
                     hit.transform.parent = pot.transform;
                     // hit.transform.SetAsFirstSibling();
                     //손 안에 들어가게 한다
@@ -289,7 +282,7 @@ public class Mission1 : MonoBehaviour
                 {
                     hit.transform.parent = position.transform;
 
-                    itemName.text = "정보 : 간장";
+                    itemName.text = "아이템 : 간장";
 
                     hit.transform.SetAsFirstSibling();
                     //손 안에 들어가게 한다
@@ -305,7 +298,7 @@ public class Mission1 : MonoBehaviour
                 {
                     hit.transform.parent = position.transform;
 
-                    itemName.text = "정보 : 설탕";
+                    itemName.text = "아이템 : 설탕";
 
                     hit.transform.SetAsFirstSibling();
                     //손 안에 들어가게 한다
@@ -320,7 +313,7 @@ public class Mission1 : MonoBehaviour
                 {
                     hit.transform.parent = position.transform;
 
-                    itemName.text = "정보 : 후추";
+                    itemName.text = "아이템 : 후추";
 
                     hit.transform.SetAsFirstSibling();
                     //손 안에 들어가게 한다
@@ -335,7 +328,7 @@ public class Mission1 : MonoBehaviour
                 {
                     hit.transform.parent = position.transform;
 
-                    itemName.text = "정보 : 다진 마늘";
+                    itemName.text = "아이템 : 다진 마늘";
 
                     hit.transform.SetAsFirstSibling();
                     //손 안에 들어가게 한다
@@ -352,7 +345,7 @@ public class Mission1 : MonoBehaviour
                 {
                     hit.transform.parent = position.transform;
 
-                    itemName.text = "정보 : 물엿";
+                    itemName.text = "아이템 : 물엿";
 
                     hit.transform.SetAsFirstSibling();
                     //손 안에 들어가게 한다
@@ -369,7 +362,7 @@ public class Mission1 : MonoBehaviour
                 {
                     hit.transform.parent = position.transform;
                     
-                    itemName.text = "정보 : 식초";
+                    itemName.text = "아이템 : 식초";
                     
                     hit.transform.SetAsFirstSibling();
                     //손 안에 들어가게 한다
@@ -384,7 +377,7 @@ public class Mission1 : MonoBehaviour
                 {
                     hit.transform.parent = position.transform;
 
-                    itemName.text = "정보 : 고추 가루";
+                    itemName.text = "아이템 : 고추 가루";
 
                     hit.transform.SetAsFirstSibling();
 
@@ -444,6 +437,10 @@ public class Mission1 : MonoBehaviour
 
                     GameObject.FindGameObjectWithTag("Bowl").transform.tag = "OtherBowl";
 
+
+                    Menual.text = "K를 눌러 물을 채워 닭을 씻기시오";
+
+
                 }
             }
             else if (count < maxcount)
@@ -484,7 +481,6 @@ public class Mission1 : MonoBehaviour
             // 바라보며 K를 누를 시 물 차오름
             if (hit.transform.CompareTag("Water"))
             {
-                Menual2.text = "K를 눌러 물을 채우시오";
 
                 print("물 차오르는 상태");
 
@@ -562,7 +558,7 @@ public class Mission1 : MonoBehaviour
                 {
                     hit.transform.parent = position.transform;
 
-                    itemName.text = "정보 : 튀김 가루";
+                    itemName.text = "아이템 : 튀김 가루";
 
                     hit.transform.SetAsFirstSibling();
                     //손 안에 들어가게 한다
@@ -578,7 +574,7 @@ public class Mission1 : MonoBehaviour
                 {
                     hit.transform.parent = position.transform;
 
-                    itemName.text = "정보 : 물";
+                    itemName.text = "아이템 : 물";
 
                     hit.transform.SetAsFirstSibling();
                     //손 안에 들어가게 한다
@@ -631,7 +627,11 @@ public class Mission1 : MonoBehaviour
                 || GameObject.FindGameObjectWithTag("Get").transform.GetChild(0).gameObject.tag == "Vinegar"
                 || GameObject.FindGameObjectWithTag("Get").transform.GetChild(0).gameObject.tag == "Chilli"))
             {
-                Menual3.text = "K를 눌러 반죽을 채우시오";
+
+                Invoke("OnNextText", 1f);
+                Invoke("OnNextText1", 3f);
+
+                
 
                 print("반죽 넣을 준비 완료");
 
@@ -801,9 +801,20 @@ public class Mission1 : MonoBehaviour
 
     }
 
-    void menuImage()
+    void NextText()
     {
-        menuImage1.SetActive(false);
-        menuImage2.SetActive(false);
+        Menual.text = "냄비에 알맞은 소스를 골라 K를 눌러 소스를 채운 뒤, \n버튼을 눌러 소스를 끓이시오";
+    }
+
+    void OnNextText()
+    {
+
+        Menual.text = "K를 눌러 반죽을 채우시오";
+    }    
+    
+    void OnNextText1()
+    {
+
+        Menual.text = "";
     }
 }
