@@ -1,0 +1,89 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+// 1. 정해진 선에 맞춰 우유 붓기
+
+public class TestMission3 : MonoBehaviour
+{
+    public float amount = 0.6f;
+    public float currentTime;
+    public bool isCheck = false;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
+        transform.GetComponent<Renderer>().material.shader = Shader.Find("BitshiftProgrammer/Liquid");
+        float f = transform.GetComponent<Renderer>().material.GetFloat("_FillAmount");
+        // transform.GetComponent<Renderer>().material.SetFloat("_FillAmount", 1f);
+
+    }
+
+
+
+
+#region One
+
+   public void MissionOne()
+    {
+
+        // 눌렀을 때
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            // 눌렀음을 확인
+            if (isCheck == true)
+            {
+
+                isCheck = false;
+                
+            }
+            // 한 번더 눌렀을 시 false로 돌아감
+            else if (isCheck == false)
+            {
+                isCheck = true;
+            }
+
+        }
+
+       OnClickOne();
+    }   
+    
+
+    
+    void OnClickOne()
+    {
+        // 만약 눌렀다면
+        if (isCheck == true)
+        {
+            currentTime += Time.deltaTime;
+            if (currentTime >= 0.1f)
+            {
+                // 차오른다
+                fill();
+
+                // 시간 초기화
+                currentTime = 0;
+            }
+        }
+    }
+ 
+    public void fill()
+    {
+        // 0.01 씩 차오르게 한다
+        amount -= 0.01f;
+
+        transform.GetComponent<Renderer>().material.SetFloat("_FillAmount", amount);
+    }
+
+    public void notfill()
+    {
+        transform.GetComponent<Renderer>().material.SetFloat("_FillAmount", 1);
+        print("실행 중임");
+    }
+
+
+    #endregion
+
+
+}
