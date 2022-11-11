@@ -17,7 +17,8 @@ public class Move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+
+        Cursor.visible = false;
 
         cc = GetComponent<CharacterController>();
     }
@@ -25,8 +26,15 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Cursor.visible = false;
-
+        if(Input.GetMouseButtonDown(1))
+        {
+            Cursor.visible = true;
+        }
+        else if(Input.GetMouseButtonDown(0))
+        {
+            Cursor.visible = false;
+        }
+        
 
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");

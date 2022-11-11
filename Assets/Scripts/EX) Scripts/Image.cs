@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 using UnityEngine.UI;
 
 public class Image : MonoBehaviour
@@ -36,7 +37,9 @@ public class Image : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Player" && count < maxcount)
+        PhotonView photonView = other.GetComponent<PhotonView>();
+
+        if (count < maxcount && photonView != null && photonView.IsMine)
         {
             // clip 파일을 실행
             audioSource.clip = clip;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using Photon.Realtime;
 using UnityEngine.UI;
 
 public class E_GameManager : MonoBehaviourPunCallbacks
@@ -89,10 +90,11 @@ public class E_GameManager : MonoBehaviourPunCallbacks
             min = 0;
             sec = 0;
 
-            //if(isCheck == true)
-            //{
+
+            if (isCheck == true)
+            {
                 Ending();
-            //}
+            }
 
             return;
         }
@@ -155,25 +157,28 @@ public class E_GameManager : MonoBehaviourPunCallbacks
     //엔딩
     public void Ending()  
     {
-        //isEnd = true;
 
+        //isEnd = true;
+        //print("Ending 실행");
         if (!isEnd)
         {
-
             returnRoomName = "극한 직업";
-            PhotonNetwork.LeaveRoom(false);
-            
+
+            PhotonNetwork.JoinLobby();
+
             isEnd = true;
         }
 
     }
 
-    string returnRoomName;
+
+
+    public string returnRoomName;
 
     public override void OnConnectedToMaster()
     {
+       
         base.OnConnectedToMaster();
-        PhotonNetwork.JoinLobby();
         print("Master Master Master Master Master ");
     }
     public override void OnJoinedLobby()
@@ -191,6 +196,7 @@ public class E_GameManager : MonoBehaviourPunCallbacks
         base.OnJoinedRoom();
         print("Room Room Room Room Room : " + returnRoomName);
 
+
         if (returnRoomName == "보이는 어둠")
         {
             PhotonNetwork.LoadLevel("Photon");
@@ -201,4 +207,30 @@ public class E_GameManager : MonoBehaviourPunCallbacks
         }
     }
 
+    public void CreateRoom()
+    {
+        // 방 옵션을 설정
+        RoomOptions roomOptions = new RoomOptions();
+
+        // 최대 인원 10명
+        roomOptions.MaxPlayers = 10;
+
+        // 룸 리스트에 보이지 않게 / 보이게
+        roomOptions.IsVisible = true;
+
+        // 방 생성 요청(해당 옵션 이용)
+        PhotonNetwork.CreateRoom("극한 직업", roomOptions);
+
+    }
+
+    // 방에 아무도 없어 존재 하지 않는다면 자동으로 만들기
+    public override void OnJoinRoomFailed(short returnCode, string message)
+    {
+        base.OnJoinRoomFailed(returnCode, message);
+        print("OnJoinRoomFailed, " + returnCode + message);
+        // 방 생성이 실패하면 자동으로 방 만들기
+        CreateRoom();
+    }
 }
+
+

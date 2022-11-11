@@ -7,7 +7,10 @@ using UnityEngine.SceneManagement;
 public class NextScene : MonoBehaviourPun
 {
     PhotonGameManager manager;
- 
+
+    [SerializeField]
+    GameObject voice;
+
     [SerializeField]
     int count = 0;
 
@@ -19,7 +22,7 @@ public class NextScene : MonoBehaviourPun
     void Start()
     {
         manager = GameObject.Find("GameManager").GetComponent<PhotonGameManager>();
-       
+     
     }
 
     // Update is called once per frame
@@ -48,8 +51,10 @@ public class NextScene : MonoBehaviourPun
     {
       
         PhotonNetwork.Destroy(manager.player);
-        // PhotonNetwork.LoadLevel("FinalGameScene");
-        SceneManager.LoadScene("FinalGameScene");
+        Destroy(voice);
+        PhotonNetwork.LeaveRoom();
+        PhotonNetwork.LoadLevel("FinalGameScene");
+        // SceneManager.LoadScene("FinalGameScene");
 
 
     }

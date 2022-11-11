@@ -22,10 +22,13 @@ public class CamMouse : MonoBehaviourPun
         {
             //camPos를 활성화
             Campos.gameObject.SetActive(true);
+            AudioListener.volume = 1;
         }
         else if(photonView.IsMine == false)
         {
             Campos.gameObject.SetActive(false);
+            // 내거 아닌 오디오 리스너는 꺼버린다
+            Campos.GetComponentInChildren<AudioListener>().enabled = false;
         }
     }
 

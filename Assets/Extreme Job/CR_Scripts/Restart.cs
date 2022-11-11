@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -62,6 +64,8 @@ public class Restart : MonoBehaviour
         if (scoreManager.Maxscore == 0)
         {
             gameOverImg.SetActive(true);
+
+            Cursor.visible = true;
             Time.timeScale = 0;
         }
     }
@@ -73,7 +77,9 @@ public class Restart : MonoBehaviour
         if (scoreManager.Maxscore >= 80 && EManager.min == 0 && EManager.sec == 0)
         {
             gameSucessImg.SetActive(true);
-            Time.timeScale = 0;
+
+            Cursor.visible = true;
+            //Time.timeScale = 0;
         }
 
     }
@@ -81,6 +87,8 @@ public class Restart : MonoBehaviour
     void CheckVideoTime(UnityEngine.Video.VideoPlayer vp)
     {
         print("비디오 끝");
+
+        // 비디오가 끝나면 GameManager에 isCheck를 true로 바꿔준다
         EManager.isCheck = true;
     }
 
