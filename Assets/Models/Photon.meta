@@ -2,15 +2,21 @@ fileFormatVersion: 2
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 guid: d8bb810da7d13474ebdbc31e10a9905c
 folderAsset: yes
 =======
 <<<<<<< Updated upstream:Assets/11.07/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta
 guid: 5168d3461225cb54ab13096087e20b08
 =======
+<<<<<<< Updated upstream:Assets/Models/11.07/Models/metal-plate-fbx/source/Metal_Plate_FBX/Metal_Plate_OBJ.mtl.meta
+guid: 6b4e5eaa04fab7c4cb1cabeab7231d02
+>>>>>>> Stashed changes
+=======
 guid: d8bb810da7d13474ebdbc31e10a9905c
 folderAsset: yes
 >>>>>>> Stashed changes:Assets/Models/Photon.meta
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 guid: 0b15fa2fcc59c724983035cefdcaaa5b
@@ -19,6 +25,8 @@ folderAsset: yes
 =======
 guid: d8bb810da7d13474ebdbc31e10a9905c
 folderAsset: yes
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 DefaultImporter:
   externalObjects: {}

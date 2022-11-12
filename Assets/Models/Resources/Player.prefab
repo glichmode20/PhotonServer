@@ -103,7 +103,11 @@ GameObject:
   - component: {fileID: 6022956592834916552}
   - component: {fileID: 2139741407375159357}
   - component: {fileID: 5547183739253975112}
+<<<<<<< Updated upstream:Assets/Models/Resources/Player.prefab
   - component: {fileID: 1589477429537571473}
+>>>>>>> Stashed changes:Assets/Resources/Player.prefab
+=======
+  - component: {fileID: 8149306103840856728}
 >>>>>>> Stashed changes:Assets/Resources/Player.prefab
   m_Layer: 0
   m_Name: Player
@@ -351,7 +355,11 @@ MonoBehaviour:
     MinDelaySoft: 200
     MaxDelaySoft: 400
     MaxDelayHard: 1000
+<<<<<<< Updated upstream:Assets/Models/Resources/Player.prefab
 --- !u!114 &1589477429537571473
+=======
+--- !u!114 &8149306103840856728
+>>>>>>> Stashed changes:Assets/Resources/Player.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -363,18 +371,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc81c92173648d34283b335a73650974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream:Assets/Models/Resources/Player.prefab
   boat: {fileID: 7039499100046788136, guid: 991a69a69a513fa4a8c13fc0d6e96cd8, type: 3}
   bPos1: {fileID: 8512273442366594780, guid: 5f621a33cbecc4646b54e5c1da9fd12f, type: 3}
   camPos: {fileID: 8460246157565961698, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
   player: {fileID: 7351449019781588934}
   reSpawn: {fileID: 5339639994608017131, guid: e4a06cbb8b7d5a94eb21e7ea74afb831, type: 3}
 --- !u!1001 &5926720170888107147
+=======
+  boat: {fileID: 7172745158967111505, guid: 991a69a69a513fa4a8c13fc0d6e96cd8, type: 3}
+  bPos1: {fileID: 6453972454869961469, guid: 5f621a33cbecc4646b54e5c1da9fd12f, type: 3}
+  camPos: {fileID: 8169412049729481649, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
+  player: {fileID: 7351449019781588934}
+  reSpawn: {fileID: 2149934698917719823, guid: e4a06cbb8b7d5a94eb21e7ea74afb831, type: 3}
+--- !u!1001 &6199399980547136216
+>>>>>>> Stashed changes:Assets/Resources/Player.prefab
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 2447997190738291962}
     m_Modifications:
+<<<<<<< Updated upstream:Assets/Models/Resources/Player.prefab
     - target: {fileID: 8460246157565961697, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -423,12 +441,68 @@ PrefabInstance:
       propertyPath: m_Name
       value: CamPos
       objectReference: {fileID: 0}
+=======
+    - target: {fileID: 8169412049729481649, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
+      propertyPath: m_Name
+      value: CamPos
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169412049729481650, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169412049729481650, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169412049729481650, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169412049729481650, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169412049729481650, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169412049729481650, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169412049729481650, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169412049729481650, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169412049729481650, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169412049729481650, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169412049729481650, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Resources/Player.prefab
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
 --- !u!4 &2834775818557239658 stripped
 Transform:
+<<<<<<< Updated upstream:Assets/Models/Resources/Player.prefab
   m_CorrespondingSourceObject: {fileID: 8460246157565961697, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
   m_PrefabInstance: {fileID: 5926720170888107147}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Stashed changes:Assets/Resources/Player.prefab
+=======
+  m_CorrespondingSourceObject: {fileID: 8169412049729481650, guid: e7cf01f193d275c4fa633f5ac1146615, type: 3}
+  m_PrefabInstance: {fileID: 6199399980547136216}
   m_PrefabAsset: {fileID: 0}
 >>>>>>> Stashed changes:Assets/Resources/Player.prefab
 --- !u!1001 &7587066294906737586

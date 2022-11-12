@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< Updated upstream
 --- !u!1 &8512273442366594780
+=======
+--- !u!1 &6453972454869961469
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +12,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 2673162915649658206}
+=======
+  - component: {fileID: 767949337310595455}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: BoatPoint
   m_TagString: Untagged
@@ -16,13 +24,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!4 &2673162915649658206
+=======
+--- !u!4 &767949337310595455
+>>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 8512273442366594780}
+=======
+  m_GameObject: {fileID: 6453972454869961469}
+>>>>>>> Stashed changes
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -146.38, y: 9.06, z: -155.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
