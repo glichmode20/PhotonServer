@@ -1,6 +1,7 @@
 fileFormatVersion: 2
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 guid: d8bb810da7d13474ebdbc31e10a9905c
 folderAsset: yes
 =======
@@ -13,6 +14,10 @@ folderAsset: yes
 >>>>>>> Stashed changes
 =======
 guid: 0b15fa2fcc59c724983035cefdcaaa5b
+folderAsset: yes
+>>>>>>> Stashed changes
+=======
+guid: d8bb810da7d13474ebdbc31e10a9905c
 folderAsset: yes
 >>>>>>> Stashed changes
 DefaultImporter:
