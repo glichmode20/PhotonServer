@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/Photon/Extreme Job/AR_Material/Line.mat.meta
+=======
+<<<<<<< Updated upstream
+guid: 35eeaedbfbf69e749a80c315e96ae255
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+=======
+>>>>>>> Stashed changes:Assets/ChickenBuilding/Materials/ChickenBuilding_L_DefaultMaterial_BaseMap.mat.meta
+guid: 77853b0bfe802184ea49cd3ebf20ce68
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+>>>>>>> Stashed changes
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

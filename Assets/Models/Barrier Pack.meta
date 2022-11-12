@@ -1,5 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<<< Updated upstream:Assets/Models/Barrier Pack.meta
 guid: 678ffdd1868b9534bae95a94a988ebbc
+========
+<<<<<<< Updated upstream:Assets/Barrier Pack.meta
+guid: 64c303d689d60d64581484e7527e21aa
+=======
+guid: 9f660ccb849c5bb49a8ab4c597c484e8
+>>>>>>> Stashed changes:Assets/Models/Barrier Pack.meta
+>>>>>>>> Stashed changes:Assets/Barrier Pack.meta
+=======
+guid: 9f660ccb849c5bb49a8ab4c597c484e8
+>>>>>>> Stashed changes
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

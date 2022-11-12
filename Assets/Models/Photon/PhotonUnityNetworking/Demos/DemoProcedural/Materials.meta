@@ -1,9 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 26fec7636ebd7ae43a99e2c187ed6500
 folderAsset: yes
 timeCreated: 1524052388
 licenseType: Store
 DefaultImporter:
+=======
+guid: 9336a7a91c230344498ca8d0d9f734c4
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> Stashed changes
   userData: 
   assetBundleName: 
   assetBundleVariant: 

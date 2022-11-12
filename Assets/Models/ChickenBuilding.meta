@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/Models/ChickenBuilding.meta
 guid: f89efb77e468f254bab066f37cb009bf
+=======
+<<<<<<< Updated upstream:Assets/ChickenBuilding.meta
+guid: 4908c9eead64ab648a8caeb1a2cfb51b
+=======
+guid: 6689586cf9eaf124ca7aa2542b3b6c3a
+>>>>>>> Stashed changes:Assets/Models/ChickenBuilding.meta
+>>>>>>> Stashed changes:Assets/ChickenBuilding.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

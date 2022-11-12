@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 guid: d8bb810da7d13474ebdbc31e10a9905c
 folderAsset: yes
 =======
@@ -9,6 +10,10 @@ guid: 5168d3461225cb54ab13096087e20b08
 guid: d8bb810da7d13474ebdbc31e10a9905c
 folderAsset: yes
 >>>>>>> Stashed changes:Assets/Models/Photon.meta
+>>>>>>> Stashed changes
+=======
+guid: 0b15fa2fcc59c724983035cefdcaaa5b
+folderAsset: yes
 >>>>>>> Stashed changes
 DefaultImporter:
   externalObjects: {}
